@@ -1,21 +1,31 @@
-<nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+<div class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+  <button (click)="onToggleClicked()"
+    class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+
   <a class="navbar-brand" href="#">
-    <img src="../assets/logos/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+    <img *ngIf="isLogoShown" src="../assets/logos/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+    <span *ngIf="isBrandShown">Bootstap</span>
   </a>
   <div class="collapse navbar-collapse bg-inverse" id="navbarCollapse">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Section 1</a>
+        <a class="nav-link" routerLink="/section1">Section 1</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Section 2</a>
+        <a class="nav-link" routerLink="/section2">Section 2</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Section 3</a>
       </li>
     </ul>
   </div>
-</nav>
+</div>
+<router-outlet></router-outlet>
+<footer class="footer">
+  <div class="container">
+    <span class="text-muted">Place sticky footer content here.</span>
+  </div>
+  <!-- /.container -->
+</footer>

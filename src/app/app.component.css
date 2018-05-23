@@ -1,4 +1,4 @@
-@media (max-width: 768px) {
+@media (max-width: 376px) {
   .navbar-collapse {
     position: absolute;
     top: 54px;
@@ -24,3 +24,15 @@
     transition: left 0.1s ease-in;
   }
 }
+
+.footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 40px;
+  border-top: 1px solid #eee;
+}
+
+.page-footer{
+  display:flex;
+}
+
