@@ -1,4 +1,4 @@
-@media (max-width: 376px) {
+@media (max-width: 450px) {
   .navbar-collapse {
     position: absolute;
     top: 54px;
@@ -10,7 +10,7 @@
   }
   .navbar-collapse.collapsing {
     height: auto;
-    -webkit-transition: left 0.1s ease;
+    -webkit-transition: left 0.0s ease;
     -o-transition: left 0.1s ease;
     -moz-transition: left 0.1s ease;
     transition: left 0.1s ease;
@@ -26,13 +26,14 @@
 }
 
 .footer {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  margin-top: 40px;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #ddd;
+  margin-top: 30px;
+  padding-top: 20px;
+  color: #CCC;
+  font-weight: lighter;
 }
 
-.page-footer{
-  display:flex;
+.footer div a {
+  color: black;
+  margin-left: 20px;
 }
-

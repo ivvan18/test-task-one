@@ -4,7 +4,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" routerLink="/section1">
     <img *ngIf="isLogoShown" src="../assets/logos/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
     <span *ngIf="isBrandShown">Bootstap</span>
   </a>
@@ -23,9 +23,17 @@
   </div>
 </div>
 <router-outlet></router-outlet>
-<footer class="footer">
+<footer>
   <div class="container">
-    <span class="text-muted">Place sticky footer content here.</span>
+    <div class="footer">
+      <div style = "float: left!important;"><p style = "color: black;">&copy; Bootstrap, 2018</p></div>
+      <div style = "float: right!important;">
+        <a><i class="fa fa-facebook"></i></a>
+        <a><i class="fa fa-vk"></i></a>
+        <a><i class="fa fa-twitter"></i></a>
+        <a><i class="fa fa-retweet"></i></a>
+      </div>
+    </div>
   </div>
-  <!-- /.container -->
 </footer>
+

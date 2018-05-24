@@ -27,11 +27,11 @@ export class AppComponent implements OnInit {
   }
 
   onToggleClicked() {
-    if (window.innerWidth <= 375) {
+    if (window.innerWidth <= 450) {
       setTimeout(() => {
         this.toggleLogo();
         this.toggleBrand();
-      }, 300);
+      }, 100);
     } else {
       this.setDefault();
     }
@@ -41,7 +41,7 @@ export class AppComponent implements OnInit {
     Observable.fromEvent(window, 'resize')
       .debounceTime(200)
       .subscribe(() => {
-        if (window.innerWidth > 375) {
+        if (window.innerWidth > 450) {
           console.log('changed!');
           this.setDefault();
         }
