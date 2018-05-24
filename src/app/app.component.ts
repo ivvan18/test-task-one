@@ -12,6 +12,7 @@ import 'rxjs/add/operator/debounceTime';
 export class AppComponent implements OnInit {
   isBrandShown = false;
   isLogoShown = true;
+  showMenu = false;
 
   toggleBrand() {
     this.isBrandShown = !this.isBrandShown;
@@ -24,6 +25,7 @@ export class AppComponent implements OnInit {
   setDefault() {
     this.isBrandShown = false;
     this.isLogoShown = true;
+    this.showMenu = false;
   }
 
   onToggleClicked() {
@@ -46,6 +48,11 @@ export class AppComponent implements OnInit {
           this.setDefault();
         }
       });
+  }
+
+  onSectionClicked() {
+    (<HTMLElement>event.target).parentElement.parentElement.parentElement.classList.remove('show');
+    this.setDefault();
   }
 
 }
