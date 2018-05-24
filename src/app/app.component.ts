@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import 'rxjs/add/observable/fromEvent';
 import { Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/debounceTime';
+import {anchorDef} from '@angular/core/src/view';
 
 
 @Component({
@@ -51,7 +52,7 @@ export class AppComponent implements OnInit {
   }
 
   onSectionClicked() {
-    (<HTMLElement>event.target).parentElement.parentElement.parentElement.classList.remove('show');
+    document.getElementById('navbarCollapse').classList.remove('show');
     this.setDefault();
   }
 
